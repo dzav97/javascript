@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jendela Dialog jQuery</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <button id="bukaDialog">Buka Dialog</button>
+
+    <div id="dialog" title="Dialog Dasar jQuery" style="display:none;">
+        <p>Ini adalah jendela dialog yang dibuat dengan jQuery</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#dialog").dialog({
+                autoOpen: false,
+                width: 500,
+                buttons: {
+                    Ok: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            $('#bukaDialog').click(function() {
+                $('#dialog').dialog('open');
+            });
+        });
+    </script>
+</body>
+</html>

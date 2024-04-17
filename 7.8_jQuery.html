@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Sederhana</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #sembunyi {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Menampilkan Elemen Tersembunyi</p>
+    <button id="tombolTampil">Klik Tampilkan</button>
+    <div id="sembunyi">
+        <p>hi</p>
+        <img src="gambar/img.png" alt="gambar" width="200px" height="100px">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $("#tombolTampil").click(function() {
+            $("#sembunyi").show();
+        });
+        });
+    </script>
+</body>
+</html>
